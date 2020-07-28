@@ -1,0 +1,28 @@
+.change-enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.change-enter-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 250ms linear;
+}
+.change-exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+.change-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 250ms linear;
+}
+
+.list {
+  list-style: none;
+}
+.item {
+  width: 200px;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: space-between;
+}
