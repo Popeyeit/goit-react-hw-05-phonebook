@@ -17,6 +17,23 @@
   transform: translateX(-100%);
 }
 
+.form-label {
+  display: block;
+  width: 400px;
+  padding: 10px;
+  margin: 0 auto 40px
+}
+
+.form-label p {
+  margin-bottom: 6px;
+}
+
+.form-label input {
+  padding: 6px;
+  border-radius: 4px;
+  width: 100%;
+}
+
 .phonebook-enter-active {
   opacity: 1;
   transform: translateX(0);
@@ -30,13 +47,13 @@
 
 .alert-enter-active {
   opacity: 1;
-  transform: translateX(70%);
+  transform: translateX(55%);
   transition: all 250ms linear;
 }
 
 .alert-exit {
   opacity: 1;
-  transform: translateX(70%);
+  transform: translateX(55%);
 }
 
 .alert-exit-active {
@@ -45,7 +62,15 @@
   transition: all 250ms linear;
 }
 
-
+.alert-wrapper {
+  top: 0;
+  left: 55%;
+  position: absolute;
+  width: 400px;
+  height: 100px;
+  background-color: red;
+  border-radius: 8px;
+}
 
 .alert-title {
   position: absolute;

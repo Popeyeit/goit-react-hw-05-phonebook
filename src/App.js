@@ -67,7 +67,9 @@ class App extends Component {
           onEntered={() => this.setState({ hasNameInContacts: false })}
         >
           <div className="alert-wrapper">
-            <h1 className="alert-title">SPARTAAAAAAAAAAAA</h1>
+            <h1 className="alert-title">
+              This name is have already in contacts list
+            </h1>
           </div>
         </CSSTransition>
         <Form addContact={this.addContact} />
@@ -77,8 +79,8 @@ class App extends Component {
           classNames="search"
           timeout={250}
         >
-          <label>
-            Find contacts by name
+          <label className="form-label">
+            <p>Find contacts by name:</p>
             <input
               type="text"
               name="search"

@@ -8,9 +8,11 @@ const ContactList = ({ contacts, deleteContact }) => {
         return (
           <CSSTransition key={id} classNames="change" timeout={250}>
             <li className="item">
-              <p>{name}</p>
-              <p>{number}</p>
-              <button onClick={() => deleteContact(id)}>close</button>
+              <p className="list-name">{name} </p>
+              <p className="list-phone">{number} </p>
+              <button onClick={() => deleteContact(id)} className="list-btn">
+                X
+              </button>
             </li>
           </CSSTransition>
         );

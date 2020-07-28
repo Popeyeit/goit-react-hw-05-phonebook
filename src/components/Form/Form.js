@@ -1,17 +1,31 @@
-import React, { Component } from 'react';
-
+import React, {
+  Component
+} from 'react';
+import './Form.css';
 export default class Form extends Component {
-  state = { name: '', number: '' };
-  changeValue = ({ target }) => {
-    const { value } = target;
-    const { name } = target;
+  state = {
+    name: '',
+    number: '',
+  };
+  changeValue = ({
+    target
+  }) => {
+    const {
+      value
+    } = target;
+    const {
+      name
+    } = target;
     this.setState({
       [name]: value,
     });
   };
   handleSubmit = e => {
     e.preventDefault();
-    const { name, number } = this.state;
+    const {
+      name,
+      number
+    } = this.state;
 
     const item = {
       id: Date.now(),
@@ -20,26 +34,46 @@ export default class Form extends Component {
     };
     console.log(item);
     this.props.addContact(item);
-    this.setState({ name: '', number: '' });
+    this.setState({
+      name: '',
+      number: '',
+    });
   };
   render() {
-    const { name, number } = this.state;
-    return (
-      <form onSubmit={this.handleSubmit}>
-        <input
-          type="text"
-          value={name}
-          name="name"
-          onChange={this.changeValue}
-        />
-        <input
-          type="number"
-          value={number}
-          name="number"
-          onChange={this.changeValue}
-        />
-        <button>Add contact</button>
-      </form>
+    const {
+      name,
+      number
+    } = this.state;
+    return ( <
+      form onSubmit = {
+        this.handleSubmit
+      }
+      className = "form" >
+      <
+      input className = "form-item"
+      type = "text"
+      value = {
+        name
+      }
+      name = "name"
+      placeholder = 'Your name'
+      onChange = {
+        this.changeValue
+      }
+      />{' '} <
+      input className = "form-item"
+      type = "phone"
+      placeholder = '333-333-333'
+      value = {
+        number
+      }
+      name = "number"
+      onChange = {
+        this.changeValue
+      }
+      />{' '} <
+      button className = "form-btn" > Add contact < /button>{' '} <
+      /form>
     );
   }
 }
